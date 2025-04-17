@@ -9,4 +9,5 @@ dependencies = [
     "granian>=2.2.5",
     "torch>=2.6.0",
     "transformers>=4.51.3",
+    "bitsandbytes>=0.45.5"
 ]
