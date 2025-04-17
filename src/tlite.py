@@ -1,5 +1,6 @@
 from dataclasses import dataclass, asdict
 
+from transformers.models.auto.configuration_auto import AutoConfig
 from transformers.utils.quantization_config import BitsAndBytesConfig
 from transformers.models.auto.tokenization_auto import AutoTokenizer
 from transformers.models.auto.modeling_auto import AutoModelForCausalLM
@@ -19,9 +20,12 @@ class Tlite:
             bnb_4bit_use_double_quant=True,
             bnb_4bit_compute_dtype=torch.bfloat16,
         )
+        tlite_config = AutoConfig.from_pretrained(model_id)
+
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id,
+            config=tlite_config,
             trust_remote_code=True,
             quantization_config=bnb_config,
             torch_dtype=torch.bfloat16,
