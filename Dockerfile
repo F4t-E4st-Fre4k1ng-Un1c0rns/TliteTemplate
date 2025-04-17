@@ -6,4 +6,4 @@ COPY pyproject.toml uv.lock .
 RUN uv sync --frozen
 
 COPY . .
-CMD [ "uv", "run", "src/app.py"]
+CMD [ "uv", "run", "python", "-m", "src.app"]
