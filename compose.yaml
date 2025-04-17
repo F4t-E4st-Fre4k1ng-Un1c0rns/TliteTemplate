@@ -1,0 +1,21 @@
+name: tlite-template-dev
+
+services:
+  tlite:
+    build: .
+    volumes:
+      - tlite-offload:/tmp/tlite-offload
+      - tlite-cache:/tmp/tlite-cache
+    ports:
+      - 8000:8000
+    develop:
+      watch:
+        - action: sync
+          path: src/
+          target: /tlite/src
+
+volumes:
+  tlite-offload:
+    name: tlite-offload
+  tlite-cache:
+    name: tlite-cache

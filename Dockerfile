@@ -1,6 +1,6 @@
 FROM nvidia/cuda:12.6.1-runtime-ubuntu20.04
 
-WORKDIR /t-lite
+WORKDIR /tlite
 
 RUN apt-get update && \
     apt-get install -y python3-pip&& \
