@@ -12,6 +12,7 @@ dependencies = [
     "bitsandbytes>=0.45.5",
     "accelerate>=1.6.0",
     "flash-attn>=2.7.4",
+    "ninja>=1.11.1.4"
 ]
 
 [tool.uv]
