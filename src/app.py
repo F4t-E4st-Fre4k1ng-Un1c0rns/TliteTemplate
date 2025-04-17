@@ -12,4 +12,5 @@ if __name__ == "__main__":
             "user",
         ),
     ]
-    model.answer(prompt)
+    print(model.answer(prompt))
+    input()
