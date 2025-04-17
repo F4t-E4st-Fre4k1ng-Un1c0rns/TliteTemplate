@@ -1,6 +1,7 @@
 from src.tlite import Tlite, Message
 
 if __name__ == "__main__":
+    
     model = Tlite()
     prompt = [
         Message(
