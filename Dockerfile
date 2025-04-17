@@ -1,12 +1,10 @@
 FROM nvidia/cuda:12.6.1-runtime-ubuntu20.04
 WORKDIR /t-lite
 
-RUN apt-get update && \
-    apt-get install -y python3-pip python3 && \
-    rm -rf /var/lib/apt/lists/*
-RUN pip install uv
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 COPY pyproject.toml uv.lock .
+RUN uv python install
 RUN uv sync --frozen
 
 COPY . .
