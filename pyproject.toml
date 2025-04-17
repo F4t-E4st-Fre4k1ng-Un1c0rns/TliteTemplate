@@ -13,3 +13,6 @@ dependencies = [
     "accelerate>=1.6.0",
     "flash-attn>=2.7.4",
 ]
+
+[tool.uv]
+no-build-isolation-package = [ "flash-attn" ]
