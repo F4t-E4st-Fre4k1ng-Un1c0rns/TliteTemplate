@@ -1,0 +1,12 @@
+[project]
+name = "tlite-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.12",
+    "granian>=2.2.5",
+    "torch>=2.6.0",
+    "transformers>=4.51.3",
+]
