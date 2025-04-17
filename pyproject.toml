@@ -11,13 +11,12 @@ dependencies = [
     "transformers>=4.51.3",
     "bitsandbytes>=0.45.5",
     "accelerate>=1.6.0",
+    "ninja>=1.11.1.4",
+    "setuptools>=78.1.0",    
+]
+this-shit-bugged = [
     "flash-attn>=2.7.4",
-    "ninja>=1.11.1.4"
 ]
 
 [tool.uv]
 no-build-isolation-package = [ "flash-attn" ]
-
-[[tool.uv.index]]
-name = "pytorch"
-url = "https://download.pytorch.org/whl/cu126"
