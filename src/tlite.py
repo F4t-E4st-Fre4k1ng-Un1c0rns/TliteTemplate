@@ -6,8 +6,6 @@ from transformers.models.auto.tokenization_auto import AutoTokenizer
 from transformers.models.auto.modeling_auto import AutoModelForCausalLM
 import torch
 
-from src.settings import settings
-
 
 @dataclass
 class Message:
@@ -33,7 +31,6 @@ class Tlite:
             quantization_config=bnb_config,
             torch_dtype=torch.bfloat16,
             offload_folder="/tmp/tlite-offload",
-            token=settings.hugging_face_access_token,
             cache_dir="/tmp/tlite-cache",
             attn_implementation="flash_attention_2",
             device_map="cuda",

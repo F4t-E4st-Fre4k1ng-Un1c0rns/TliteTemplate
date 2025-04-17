@@ -11,5 +11,4 @@ dependencies = [
     "transformers>=4.51.3",
     "bitsandbytes>=0.45.5",
     "accelerate>=1.6.0",
-    "pydantic-settings>=2.8.1",
 ]
